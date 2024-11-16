@@ -1,6 +1,6 @@
 {
   "name": "chain-portal",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "NFT Authentication SDK with UI Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -18,13 +18,13 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "lucide-react": ">=0.263.1",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "dependencies": {
     "@metamask/eth-sig-util": "^8.0.0",
     "ethereumjs-util": "^7.1.5",
+    "lucide-react": "^0.263.1",
     "web3": "^4.15.0"
   },
   "devDependencies": {

@@ -1,26 +1,23 @@
 # Example usage
 
 ```javascript
+import React from 'react';
 import { WalletConnectButton } from 'chain-portal';
 
 function App() {
-  const handleConnect = async (providerId) => {
-    // Handle wallet connection logic
-    console.log('Connecting to:', providerId);
+  const handleConnect = async (provider: string, account: string) => {
+    console.log(`Connected to ${provider} with account ${account}`);
+  };
+
+  const handleError = (error: Error) => {
+    console.error('Connection error:', error.message);
   };
 
   return (
-    <WalletConnectButton 
+    <WalletConnectButton
       onConnect={handleConnect}
-      theme="dark"
-      customProviders={[
-        {
-          id: 'custom-wallet',
-          name: 'Custom Wallet',
-          icon: '💼',
-          description: 'Connect with Custom Wallet'
-        }
-      ]}
+      onError={handleError}
+      theme="light"
     />
   );
 }

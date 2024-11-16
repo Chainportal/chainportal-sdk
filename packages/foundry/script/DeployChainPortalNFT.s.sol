@@ -1,16 +1,16 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "../contracts/YourContract.sol";
+import "../contracts/ChainPortalNFT.sol";
 import "./DeployHelpers.s.sol";
 
-contract DeployYourContract is ScaffoldETHDeploy {
+contract DeployChainPortalNFT is ScaffoldETHDeploy {
   // use `deployer` from `ScaffoldETHDeploy`
   function run() external ScaffoldEthDeployerRunner {
-    YourContract yourContract = new YourContract(deployer);
+    ChainPortalNFT chainPortalNFT = new ChainPortalNFT();
     console.logString(
       string.concat(
-        "YourContract deployed at: ", vm.toString(address(yourContract))
+        "ChainPortalNFT deployed at: ", vm.toString(address(chainPortalNFT))
       )
     );
   }

@@ -1,6 +1,6 @@
 // src/WalletConnectButton.tsx
 import React, { useState, useCallback } from 'react';
-import { Wallet, CheckCircle } from 'lucide-react';
+import * as LucideIcons from 'lucide-react';  // Import all icons
 
 interface WalletProvider {
   id: string;
@@ -39,6 +39,8 @@ const defaultProviders: WalletProvider[] = [
 ];
 
 type ConnectionState = 'disconnected' | 'connected' | 'verified';
+
+const { Wallet, CheckCircle } = LucideIcons;  // Destructure icons after import
 
 export const WalletConnectButton: React.FC<WalletButtonProps> = ({
   onConnect = async () => {},
